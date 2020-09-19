@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1600465085 source:c:\users\ysush\desktop\logicgatesevaluator\unity\unity.c
+	"unity.h"
+	<stddef.h>
+	<avr/pgmspace.h>
+
+1600463606 c:\users\ysush\desktop\logicgatesevaluator\unity\unity.h
+	"unity_internals.h"
+
+1600463606 c:\users\ysush\desktop\logicgatesevaluator\unity\unity_internals.h
+	"unity_config.h"
+	<setjmp.h>
+	<math.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdint.h>
+	<limits.h>
+	<stdio.h>
+	<stdio.h>
+	<time.h>
+	<time.h>
+
+1600469879 source:c:\users\ysush\desktop\logicgatesevaluator\src\logic_gates.c
+	<stdio.h>
+
+1600469493 source:c:\users\ysush\desktop\logicgatesevaluator\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"test_logicgates.h"
+
+1600464973 c:\users\ysush\desktop\logicgatesevaluator\test\test_logicgates.h
+
+1600469975 source:c:\users\ysush\desktop\logicgatesevaluator\test\test_logicgates.c
+	"unity.h"
+	"logic_gates.h"
+
+1600467272 c:\users\ysush\desktop\logicgatesevaluator\inc\logic_gates.h
+
