@@ -1,6 +1,0 @@
-#ifndef TEST_LOGICGATES_H_INCLUDED
-#define TEST_LOGICGATES_H_INCLUDED
-
-
-void test_main(void);
-#endif // TEST_LOGICGATES_H_INCLUDED
