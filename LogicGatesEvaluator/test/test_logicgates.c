@@ -192,7 +192,7 @@ void test_and()
   CU_ASSERT(0 == and_two(0,0));
   CU_ASSERT(0== and_two(0,1));
   CU_ASSERT(0==and_two(1,0));
-  CU_ASSERT(1==and_two(1,1));
+  CU_ASSERT(0==and_two(1,1));
 
   CU_ASSERT(0==and_three(0,0,0));
   CU_ASSERT(0==and_three(0,0,1));
