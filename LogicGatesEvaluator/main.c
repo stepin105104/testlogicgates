@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-#include "test_logicgates.h"
 
 
 enum gates{ NOT=1, AND, OR, NAND, NOR, XOR, XNOR, QUIT };
