@@ -163,6 +163,12 @@ int main() {
   
   /* Add your test functions in this format for testing*/
   CU_add_test(suite, "not", test_not);
+   CU_add_test(suite, "and", test_and);
+   CU_add_test(suite, "or", test_or);
+   CU_add_test(suite, "nand", test_nand);
+   CU_add_test(suite, "nor", test_nor);
+   CU_add_test(suite, "xor", test_xor);
+   CU_add_test(suite, "xnor", test_xnor);
 
             
 
@@ -192,7 +198,7 @@ void test_and()
   CU_ASSERT(0 == and_two(0,0));
   CU_ASSERT(0== and_two(0,1));
   CU_ASSERT(0==and_two(1,0));
-  CU_ASSERT(0==and_two(1,1));
+  CU_ASSERT(1==and_two(1,1));
 
   CU_ASSERT(0==and_three(0,0,0));
   CU_ASSERT(0==and_three(0,0,1));
