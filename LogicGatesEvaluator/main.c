@@ -147,7 +147,7 @@ printf("\nLogic Gates Evaluator");
     result=xnor(a,b);
                       break;
 
-            case QUIT:test_main();
+            case QUIT:
                       exit(0);
                       break;
             default : system("cls");
