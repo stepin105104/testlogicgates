@@ -143,6 +143,12 @@ void test_main(void)
 
 /* Prototypes for all the test functions */
 void test_not(void);
+void test_and(void);
+void test_or(void);
+void test_nand(void);
+void test_nor(void);
+void test_xor(void);
+void test_xnor(void);
 
 
 /* Start of the application test */
@@ -175,11 +181,108 @@ int main() {
 }
  void test_not(void)
 {
-
-
   CU_ASSERT(0 == not(1));
-
   CU_ASSERT(1 == not(0));
 
+}
+void test_and()
+{
+
+
+  CU_ASSERT(0 == and_two(0,0));
+  CU_ASSERT(0== and_two(0,1));
+  CU_ASSERT(0==and_two(1,0));
+  CU_ASSERT(1==and_two(1,1));
+
+  CU_ASSERT(0==and_three(0,0,0));
+  CU_ASSERT(0==and_three(0,0,1));
+  CU_ASSERT(0==and_three(0,1,0));
+  CU_ASSERT(0==and_three(0,1,1));
+  CU_ASSERT(0==and_three(1,0,0));
+  CU_ASSERT(0==and_three(1,0,1));
+  CU_ASSERT(0==and_three(1,1,0));
+  CU_ASSERT(1==and_three(1,1,1));
+}
+void test_or()
+{
+
+
+  CU_ASSERT(0==or_two(0,0));
+  CU_ASSERT(1==or_two(0,1));
+  CU_ASSERT(1==or_two(1,0));
+  CU_ASSERT(1==or_two(1,1));
+
+  CU_ASSERT(0==or_three(0,0,0));
+  CU_ASSERT(1==or_three(0,0,1));
+  CU_ASSERT(1==or_three(0,1,0));
+  CU_ASSERT(1==or_three(0,1,1));
+  CU_ASSERT(1==or_three(1,0,0));
+  CU_ASSERT(1==or_three(1,0,1));
+  CU_ASSERT(1==or_three(1,1,0));
+  CU_ASSERT(1==or_three(1,1,1));
+}
+
+void test_nand()
+{
+
+
+  CU_ASSERT(1==nand_two(0,0));
+  CU_ASSERT(1==nand_two(0,1));
+  CU_ASSERT(1==nand_two(1,0));
+  CU_ASSERT(0==nand_two(1,1));
+
+  CU_ASSERT(1==nand_three(0,0,0));
+  CU_ASSERT(1==nand_three(0,0,1));
+  CU_ASSERT(1==nand_three(0,1,0));
+  CU_ASSERT(1==nand_three(0,1,1));
+  CU_ASSERT(1==nand_three(1,0,0));
+  CU_ASSERT(1==nand_three(1,0,1));
+  CU_ASSERT(1==nand_three(1,1,0));
+  CU_ASSERT(0==nand_three(1,1,1));
+}
+
+void test_nor()
+{
+
+  CU_ASSERT(1==nor_two(0,0));
+  CU_ASSERT(0==nor_two(0,1));
+  CU_ASSERT(0==nor_two(1,0));
+  CU_ASSERT(0==nor_two(1,1));
+
+  CU_ASSERT(1==nor_three(0,0,0));
+  CU_ASSERT(0==nor_three(0,0,1));
+  CU_ASSERT(0==nor_three(0,1,0));
+  CU_ASSERT(0==nor_three(0,1,1));
+  CU_ASSERT(0==nor_three(1,0,0));
+  CU_ASSERT(0==nor_three(1,0,1));
+  CU_ASSERT(0==nor_three(1,1,0));
+  CU_ASSERT(0==nor_three(1,1,1));
+}
+void test_xor()
+{
+
+
+  CU_ASSERT(0==xor_two(0,0));
+  CU_ASSERT(1==xor_two(0,1));
+  CU_ASSERT(1==xor_two(1,0));
+  CU_ASSERT(0==xor_two(1,1));
+
+  CU_ASSERT(0==xor_three(0,0,0));
+  CU_ASSERT(1==xor_three(0,0,1));
+  CU_ASSERT(1==xor_three(0,1,0));
+  CU_ASSERT(0==xor_three(0,1,1));
+  CU_ASSERT(1==xor_three(1,0,0));
+  CU_ASSERT(0==xor_three(1,0,1));
+  CU_ASSERT(0==xor_three(1,1,0));
+  CU_ASSERT(1==xor_three(1,1,1));
+}
+void test_xnor()
+{
+
+
+  CU_ASSERT(1==xnor(0,0));
+  CU_ASSERT(0==xnor(0,1));
+  CU_ASSERT(0==xnor(1,0));
+  CU_ASSERT(1==xnor(1,1));
 }
 
